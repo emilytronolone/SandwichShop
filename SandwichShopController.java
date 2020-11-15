@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -19,13 +20,13 @@ public class SandwichShopController implements Initializable {
 	
 	@FXML
 	public ComboBox<String> sandwichType;
-	ObservableList<String> list = FXCollections.observableArrayList("Chicken", "Beef", "Fish");
+	ObservableList<String> types = FXCollections.observableArrayList("Chicken", "Beef", "Fish");
 
 	@FXML
-	private ListView<?> ingredientsIncluded;
+	private ListView<String> ingredientsIncluded;
 
 	@FXML
-    private ListView<?> ingredientSelections;
+	public ListView<String> ingredientSelections;
 
 	@FXML
     private Button add;
@@ -50,8 +51,17 @@ public class SandwichShopController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		sandwichType.setItems(list);
+		sandwichType.setItems(types);
 		sandwichType.setValue("Chicken");
+		ingredientSelections.getItems().add("Lettuce");
+		ingredientSelections.getItems().add("Tomato");
+		ingredientSelections.getItems().add("Bacon");
+		ingredientSelections.getItems().add("Onion");
+		ingredientSelections.getItems().add("Mushrooms");
+		ingredientSelections.getItems().add("Spinach");
+		ingredientSelections.getItems().add("Pickles");
+		ingredientSelections.getItems().add("Provolone");
+		ingredientSelections.getItems().add("American");
+		ingredientSelections.getItems().add("Swiss");
 	}
-
 }
