@@ -10,5 +10,5 @@ public abstract class Sandwich implements Customizable {
 	static final double PER_EXTRA = 1.99;
 	protected ArrayList<Extra> extras;
 	public abstract double price();
-	//public String toString() {}
+	public String toString() { return null; }
 }
