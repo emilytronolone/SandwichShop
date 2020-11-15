@@ -1,27 +1,37 @@
+import java.util.ArrayList;
+
 /**
  * 
  */
-package application;
+//package application;
 
 public class Chicken extends Sandwich {
+
+	private ArrayList<String> extras = new ArrayList<String>();
 
 	@Override
 	public boolean add(Object obj) {
 		// TODO Auto-generated method stub
-		return false;
+		if(extras.size() == MAX_EXTRAS) return false;
+		extras.add((String)obj);
+		return true;
 	}
 
 	@Override
 	public boolean remove(Object obj) {
 		// TODO Auto-generated method stub
-		return false;
+		extras.remove((String)obj);
+		return true;
 	}
 
 	@Override
 	public double price() {
-		return 8.99;
+		double price = 8.99;
+		price += 1.99 * extras.size();
+		price = (double)Math.round(price * 100d) / 100d;
+		return price;
 	}
-	
+
 	@Override
 	public String toString() {
 		return null;
