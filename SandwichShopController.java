@@ -4,6 +4,7 @@
 //package application;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -19,6 +20,7 @@ import javafx.scene.control.TextArea;
 public class SandwichShopController implements Initializable {
 
 	private Sandwich sandwich = new Chicken();
+	private ArrayList<Sandwich> sandwiches = new ArrayList<Sandwich>();
 	
 	@FXML
 	public ComboBox<String> sandwichType;
@@ -118,5 +120,17 @@ public class SandwichShopController implements Initializable {
 		extraIngredients.getItems().removeIf(n -> (n.equals(selected)));
 		ingredientSelections.getItems().add(selected);
 		price.setText("$" + sandwich.price());
+	}
+
+	@FXML
+	private void addToOrder(ActionEvent event) {
+		sandwiches.add(sandwich);
+		sandwichType.setValue("Chicken");
+		this.sandwichTypeSelection(null);
+	}
+
+	@FXML
+	private void showOrder(ActionEvent event) throws Exception {
+		Main.swap();
 	}
 }
