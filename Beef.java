@@ -34,6 +34,6 @@ public class Beef extends Sandwich {
 	
 	@Override
 	public String toString() {
-		return null;
+		return "Beef Sandwich : $"+ price() + " : Basic Ingredients - Roast Beef, Provolone, Mustard : Extra Ingredients - " + extras.toString();
 	}
 }
