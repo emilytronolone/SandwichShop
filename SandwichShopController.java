@@ -32,7 +32,7 @@ public class SandwichShopController implements Initializable {
 	private ListView<String> ingredientsIncluded;
 	
 	@FXML
-    private ImageView sandwichImage;
+    public ImageView sandwichImage;
 
 	@FXML
 	public ListView<String> ingredientSelections;
@@ -68,8 +68,8 @@ public class SandwichShopController implements Initializable {
 		extraIngredients.setEditable(false);
 		ingredientSelections.getItems().addAll("Lettuce", "Tomato", "Bacon", "Onion", "Mushrooms",
 				"Spinach", "American", "Swiss", "Avocado", "Mayonnaise");
-		//Image chickenImage = new Image("https://www.seriouseats.com/recipes/images/2015/08/20150815-five-ingredient-chicken-sandwich-16-1500x1125.jpg");
-		//sandwichImage.setImage(chickenImage);
+		Image chickenImage = new Image("https://res.cloudinary.com/mealthy1/image/upload/ar_16:11,c_fill,f_auto,h_600,q_auto:best,w_800/v1539970541/cms_recipe_featured_image/oizv8eotmeopybgnjt3w.jpg");
+		sandwichImage.setImage(chickenImage);
 		this.sandwichTypeSelection(null);
 	}
 
@@ -84,8 +84,8 @@ public class SandwichShopController implements Initializable {
 				ingredientsIncluded.getItems().clear();
 				ingredientsIncluded.getItems().addAll("Roast Beef", "Provolone Cheese", "Mustard");
 				price.setText("$" + sandwich.price());
-				//Image beefImage = new Image("https://ahintofwine.com/wp-content/uploads/2014/03/DSC_06721.jpg");
-				//sandwichImage.setImage(beefImage);
+				Image beefImage = new Image("http://ahintofwine.com/wp-content/uploads/2014/03/DSC_06721-1024x682.jpg");
+				sandwichImage.setImage(beefImage);
 				break;
 			}
 			case "Chicken":{
@@ -96,8 +96,8 @@ public class SandwichShopController implements Initializable {
 				ingredientsIncluded.getItems().clear();
 				ingredientsIncluded.getItems().addAll("Fried Chicken", "Spicy Sauce", "Pickles");
 				price.setText("$" + sandwich.price());
-				//Image chickenImage = new Image("https://www.seriouseats.com/recipes/images/2015/08/20150815-five-ingredient-chicken-sandwich-16-1500x1125.jpg");
-				//sandwichImage.setImage(chickenImage);
+				Image chickenImage = new Image("https://res.cloudinary.com/mealthy1/image/upload/ar_16:11,c_fill,f_auto,h_600,q_auto:best,w_800/v1539970541/cms_recipe_featured_image/oizv8eotmeopybgnjt3w.jpg");
+				sandwichImage.setImage(chickenImage);
 				break;
 			}
 			case "Fish":{
@@ -108,8 +108,8 @@ public class SandwichShopController implements Initializable {
 				ingredientsIncluded.getItems().clear();
 				ingredientsIncluded.getItems().addAll("Grilled Snapper", "Cilantro", "Lime");
 				price.setText("$" + sandwich.price());
-				//Image fishImage = new Image("https://www.rachaelraymag.com/.image/t_share/MTYyNzM5NjE4NTA3MTM4OTE0/mexican-red-snapper-sandwiches-0365453d.jpg");
-				//sandwichImage.setImage(fishImage);
+				Image fishImage = new Image("https://www.rachaelraymag.com/.image/t_share/MTYyNzM5NjE4NTA3MTM4OTE0/mexican-red-snapper-sandwiches-0365453d.jpg");
+				sandwichImage.setImage(fishImage);
 				break;
 			}
 		}
