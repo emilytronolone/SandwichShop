@@ -25,13 +25,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -44,15 +37,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/openjfx-11.0.2_windows-x64_bin-sdk/javafx-sdk-11.0.2/lib" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="SandwichShop" />
-      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\legod\Downloads\openjfx-11.0.2_windows-x64_bin-sdk\javafx-sdk-11.0.2\lib&quot; --add-modules=javafx.controls,javafx.base,javafx.graphics,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -86,49 +78,13 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="249" y="0" key="#Project_Structure" timestamp="1605484421081">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1605484421081" />
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605431254384">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1605431254384" />
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1605461237445">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="574" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1605461237445" />
     <state x="473" y="154" key="FileChooserDialogImpl" timestamp="1605430162268">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="473" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605430162268" />
-    <state width="1493" height="214" key="GridCell.Tab.0.bottom" timestamp="1605513320015">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="214" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605513320015" />
-    <state width="1493" height="214" key="GridCell.Tab.0.center" timestamp="1605513320014">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="214" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605513320014" />
-    <state width="1493" height="214" key="GridCell.Tab.0.left" timestamp="1605513320014">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="214" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605513320014" />
-    <state width="1493" height="214" key="GridCell.Tab.0.right" timestamp="1605513320015">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="214" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605513320015" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1605430170874">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605430170874" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1605464810102">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605464810102" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605495078322">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605495078322" />
   </component>
 </project>

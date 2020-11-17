@@ -3,7 +3,6 @@
  */
 //package application;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -12,20 +11,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
-import javafx.stage.Stage;
 
 public class SandwichShopController implements Initializable {
 
 	private Sandwich sandwich = new Chicken();
-	public Order order = new Order();
+	private ArrayList<Sandwich> sandwiches = new ArrayList<Sandwich>();
 	
 	@FXML
 	public ComboBox<String> sandwichType;
@@ -129,31 +124,13 @@ public class SandwichShopController implements Initializable {
 
 	@FXML
 	private void addToOrder(ActionEvent event) {
-		OrderLine orderLine = new OrderLine(sandwich);
-		order.add(orderLine);
+		sandwiches.add(sandwich);
 		sandwichType.setValue("Chicken");
-		extraIngredients.getItems().clear();
 		this.sandwichTypeSelection(null);
 	}
 
 	@FXML
 	private void showOrder(ActionEvent event) throws Exception {
-		//Main.swap();
-		try{
-			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("OrderSummary.fxml"));
-			Parent root = fxmlLoader.load();
-			Stage stage = new Stage();
-			stage.setScene(new Scene(root, 600,600));
-			stage.show();
-			OrderSummaryController orderSummaryController = (OrderSummaryController) fxmlLoader.getController();
-			orderSummaryController.setOrder(order);
-			orderSummaryController.update();
-		}catch (Exception e){
-			e.printStackTrace();
-		}
-	}
-
-	public Order getOrder(){
-		return order;
+		Main.swap();
 	}
 }

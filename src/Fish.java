@@ -39,6 +39,6 @@ public class Fish extends Sandwich {
 
 	@Override
 	public String toString() {
-		return "Fish Sandwich : $"+ price() + " : Basic Ingredients - Grilled Snapper, Cilantro, Lime : Extra Ingredients - " + extras.toString();
+		return null;
 	}
 }
