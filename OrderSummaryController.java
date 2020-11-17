@@ -1,4 +1,5 @@
 /**
+ * This is a controller for OrderSummary.fxml.
  * @author Devin Gulati, Emily Tronolone
  */
 package application;
@@ -33,6 +34,9 @@ public class OrderSummaryController implements Initializable {
 
     }
 
+    /**
+	Update orderline and price.
+	*/
     public void update(){
         orderList.getItems().clear();
         Double price = 0d;
@@ -44,6 +48,9 @@ public class OrderSummaryController implements Initializable {
         output.setText("$" + price);
     }
 
+    /**
+	Functionality for the "back" button.
+	*/
     public void back(ActionEvent event) throws Exception{
         try{
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("SandwichShop.fxml"));
@@ -55,14 +62,24 @@ public class OrderSummaryController implements Initializable {
         ((Stage) backButton.getScene().getWindow()).close();
     }
 
+    /**
+	Setter method for order.
+	*/
     public void setOrder(Order order){
         this.order = order;
     }
 
+    /**
+	Getter method for order.
+	@return Order
+	*/
     public Order getOrder() {
         return order;
     }
 
+    /**
+	Remove an item from the order.
+	*/
     @FXML
     private void remove(ActionEvent event) {
         try {
@@ -76,6 +93,9 @@ public class OrderSummaryController implements Initializable {
         }
     }
 
+    /**
+	Duplicate an item and add it to the order.
+	*/
     @FXML
     private void duplicate(ActionEvent event) {
         try {
@@ -89,12 +109,18 @@ public class OrderSummaryController implements Initializable {
         }
     }
 
+    /**
+	Clear the entire order.
+	*/
     @FXML
     private void clear(ActionEvent event) {
         order = new Order();
         this.update();
     }
 
+    /**
+	Save the order to a text file.
+	*/
     @FXML
     private void toFile(ActionEvent event) {
         try {

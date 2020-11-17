@@ -1,4 +1,5 @@
 /**
+ * This is a Java interface used for Sandwich and its subclasses.
  * @author Devin Gulati, Emily Tronolone
  */
 package application;

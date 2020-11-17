@@ -1,5 +1,6 @@
 /**
-@author Devin Gulati, Emily Tronolone
+ * This class sets up the JavaFX project and opens the main UI.
+ * @author Devin Gulati, Emily Tronolone
 */
 
 package application;
@@ -14,11 +15,14 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-
+	/**
+	Opens FXML file as a stage.
+	@param stage to be opened
+	*/
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("SandwichShop.fxml"));
-        primaryStage.setTitle("primaryStage");
+        primaryStage.setTitle("SandwichShop");
         primaryStage.setScene(new Scene(root, 600, 600));
         Stage stage = primaryStage;
         stage.show();

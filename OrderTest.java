@@ -1,4 +1,5 @@
 /**
+ * JUnit testing for the Order class.
  * @author Devin Gulati, Emily Tronolone
  */
 package application;
@@ -7,18 +8,27 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-/**
- * @author emily
- *
- */
 class OrderTest {
-
+	
+	Order order = new Order();
+	Sandwich chicken1 = new Chicken();
+	Sandwich chicken2 = new Chicken();
+	Sandwich chicken3 = new Chicken();
+	Sandwich chicken4 = new Chicken();
+	Sandwich beef1 = new Beef();
+	Sandwich beef2 = new Beef();
+	Sandwich beef3 = new Beef();
+	Sandwich fish1 = new Fish();
+	Sandwich fish2 = new Fish();
+	Sandwich fish3 = new Fish();
+	
 	/**
 	 * Test method for {@link application.Order#add(java.lang.Object)}.
 	 */
 	@Test
 	void testAdd() {
-		fail("Not yet implemented");
+		assertTrue(order.add(chicken1));
+		//fail("Not yet implemented");
 	}
 
 	/**

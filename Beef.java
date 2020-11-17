@@ -1,4 +1,6 @@
 /**
+ * This class creates an object for a beef sandwich.
+ * You can add/remove extras, get the price, and print as a string.
  * @author Devin Gulati, Emily Tronolone
  */
 package application;
@@ -8,7 +10,12 @@ import java.util.ArrayList;
 public class Beef extends Sandwich {
 
 	private ArrayList<String> extras = new ArrayList<String>();;
-
+	
+	/**
+	Adds an extra to the sandwich.
+	@param extra to be added
+	@return true if extra was added
+	*/
 	@Override
 	public boolean add(Object obj) {
 		// TODO Auto-generated method stub
@@ -17,6 +24,11 @@ public class Beef extends Sandwich {
 		return true;
 	}
 
+	/**
+	Removes an extra from the sandwich.
+	@param extra to be removed
+	@return false if extra was removed
+	*/
 	@Override
 	public boolean remove(Object obj) {
 		// TODO Auto-generated method stub
@@ -24,6 +36,10 @@ public class Beef extends Sandwich {
 		return false;
 	}
 
+	/**
+	Returns the price of a beef sandwich.
+	@return double: price of the sandwich
+	*/
 	@Override
 	public double price() {
 		double price = 10.99;
@@ -32,6 +48,10 @@ public class Beef extends Sandwich {
 		return price;
 	}
 	
+	/**
+	Creates a string of the beef sandwich, its price, and any additional extras.
+	@return String: sandwich, price, and extras
+	*/
 	@Override
 	public String toString() {
 		return "Beef Sandwich : $"+ price() + " : Basic Ingredients - Roast Beef, Provolone, Mustard : Extra Ingredients - " + extras.toString();

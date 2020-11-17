@@ -1,4 +1,6 @@
 /**
+ * This class creates a new order.
+ * You can add and remove from an order.
  * @author Devin Gulati, Emily Tronolone
  */
 package application;
@@ -9,6 +11,11 @@ public class Order implements Customizable {
 	public static int lineNumber; //reset for each new order;
 	public ArrayList<OrderLine> orderlines = new ArrayList<OrderLine>();
 	
+	/**
+	Adds a sandwich to an order.
+	@param sandwich to be added
+	@return true on success
+	*/
 	@Override
 	public boolean add(Object obj) {
 		// TODO Auto-generated method stub
@@ -17,6 +24,12 @@ public class Order implements Customizable {
 		orderlines.add(order);
 		return true;
 	}
+	
+	/**
+	Removes a sandwich from an order.
+	@param sandwich to be removed
+	@return true on success
+	*/
 	@Override
 	public boolean remove(Object obj) {
 		// TODO Auto-generated method stub

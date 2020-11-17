@@ -1,4 +1,5 @@
 /**
+ * This is a controller for SandwichShop.fxml.
  * @author Devin Gulati, Emily Tronolone
  */
 package application;
@@ -62,6 +63,9 @@ public class SandwichShopController implements Initializable {
     @FXML
     private TextArea output;
 
+    /**
+	Sets chicken sandwich as the default value.
+	*/
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		sandwichType.setItems(types);
@@ -77,6 +81,9 @@ public class SandwichShopController implements Initializable {
 		this.sandwichTypeSelection(null);
 	}
 
+	/**
+	Detects which type of sandwich was selected and changes ingredients displayed.
+	*/
 	@FXML
 	private void sandwichTypeSelection(ActionEvent event) {
 		switch (sandwichType.getValue()){
@@ -119,6 +126,9 @@ public class SandwichShopController implements Initializable {
 		}
 	}
 
+	/**
+	Add extras to a sandwich.
+	*/
 	@FXML
 	private void add(ActionEvent event) {
 		String selected = ingredientSelections.getSelectionModel().getSelectedItem();
@@ -132,6 +142,9 @@ public class SandwichShopController implements Initializable {
 		price.setText("$" + sandwich.price());
 	}
 
+	/**
+	Remove extras from a sandwich.
+	*/
 	@FXML
 	private void remove(ActionEvent event) {
 		String selected = extraIngredients.getSelectionModel().getSelectedItem();
@@ -142,6 +155,9 @@ public class SandwichShopController implements Initializable {
 		price.setText("$" + sandwich.price());
 	}
 
+	/**
+	Add sandwich to order.
+	*/
 	@FXML
 	private void addToOrder(ActionEvent event) {
 		OrderLine orderLine = new OrderLine(sandwich);
@@ -152,6 +168,9 @@ public class SandwichShopController implements Initializable {
 		this.sandwichTypeSelection(null);
 	}
 
+	/**
+	Display order and open second UI.
+	*/
 	@FXML
 	private void showOrder(ActionEvent event) throws Exception {
 		//Main.swap();
@@ -170,6 +189,10 @@ public class SandwichShopController implements Initializable {
 		}
 	}
 
+	/**
+	Getter method for Order.
+	@return Order
+	*/
 	public Order getOrder(){
 		return order;
 	}
