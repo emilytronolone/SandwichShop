@@ -4,10 +4,15 @@ import java.util.ArrayList;
  * 
  */
 //package application;
+<<<<<<< Updated upstream:Chicken.java
+=======
 
-public class Beef extends Sandwich {
+import java.util.ArrayList;
+>>>>>>> Stashed changes:src/Chicken.java
 
-	private ArrayList<String> extras = new ArrayList<String>();;
+public class Chicken extends Sandwich {
+
+	private ArrayList<String> extras = new ArrayList<String>();
 
 	@Override
 	public boolean add(Object obj) {
@@ -21,19 +26,19 @@ public class Beef extends Sandwich {
 	public boolean remove(Object obj) {
 		// TODO Auto-generated method stub
 		extras.remove((String)obj);
-		return false;
+		return true;
 	}
 
 	@Override
 	public double price() {
-		double price = 10.99;
+		double price = 8.99;
 		price += 1.99 * extras.size();
 		price = (double)Math.round(price * 100d) / 100d;
 		return price;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Beef Sandwich : $"+ price() + " : Basic Ingredients - Roast Beef, Provolone, Mustard : Extra Ingredients - " + extras.toString();
+		return "Chicken Sandwich : $"+ price() + " : Basic Ingredients - Fried Chicken, Spicy Sauce, Pickles : Extra Ingredients - " + extras.toString();
 	}
 }

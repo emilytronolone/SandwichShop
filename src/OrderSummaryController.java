@@ -1,6 +1,10 @@
 /**
  * @author Devin Gulati, Emily Tronolone
  */
+<<<<<<< Updated upstream:OrderSummaryController.java
+=======
+//package application;
+>>>>>>> Stashed changes:src/OrderSummaryController.java
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
