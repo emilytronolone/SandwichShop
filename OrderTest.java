@@ -22,12 +22,18 @@ class OrderTest {
 	Sandwich fish2 = new Fish();
 	Sandwich fish3 = new Fish();
 	
+	OrderLine test1 = new OrderLine(chicken1);
+	OrderLine test2 = new OrderLine(beef1);
+	OrderLine test3 = new OrderLine(fish1);
+	
 	/**
 	 * Test method for {@link application.Order#add(java.lang.Object)}.
 	 */
 	@Test
 	void testAdd() {
-		assertTrue(order.add(chicken1));
+		assertTrue(order.add(test1));
+		assertTrue(order.add(test2));
+		assertTrue(order.add(test3));
 		//fail("Not yet implemented");
 	}
 
@@ -36,7 +42,10 @@ class OrderTest {
 	 */
 	@Test
 	void testRemove() {
-		fail("Not yet implemented");
+		assertTrue(order.remove(test1));
+		assertTrue(order.add(test2));
+		assertTrue(order.add(test3));
+		//fail("Not yet implemented");
 	}
 
 }
