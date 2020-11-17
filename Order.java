@@ -7,16 +7,20 @@ import java.util.ArrayList;
 
 public class Order implements Customizable {
 	public static int lineNumber; //reset for each new order;
-	private ArrayList<OrderLine> orderlines;
+	public ArrayList<OrderLine> orderlines = new ArrayList<OrderLine>();
 	
 	@Override
 	public boolean add(Object obj) {
 		// TODO Auto-generated method stub
-		return false;
+		OrderLine order = (OrderLine) obj;
+		order.setLineNumber(orderlines.size());
+		orderlines.add(order);
+		return true;
 	}
 	@Override
 	public boolean remove(Object obj) {
 		// TODO Auto-generated method stub
-		return false;
+		orderlines.remove(obj);
+		return true;
 	}
 }

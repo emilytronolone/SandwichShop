@@ -1,5 +1,5 @@
 /**
- * 
+ * @author Devin Gulati, Emily Tronolone
  */
 package application;
 
@@ -34,6 +34,6 @@ public class Chicken extends Sandwich {
 
 	@Override
 	public String toString() {
-		return null;
+		return "Chicken Sandwich : $"+ price() + " : Basic Ingredients - Fried Chicken, Spicy Sauce, Pickles : Extra Ingredients - " + extras.toString();
 	}
 }

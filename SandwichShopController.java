@@ -1,5 +1,5 @@
 /**
- * 
+ * @author Devin Gulati, Emily Tronolone
  */
 package application;
 
@@ -11,18 +11,22 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 public class SandwichShopController implements Initializable {
 
 	private Sandwich sandwich = new Chicken();
-	private ArrayList<Sandwich> sandwiches = new ArrayList<Sandwich>();
+	public Order order = new Order();
 	
 	@FXML
 	public ComboBox<String> sandwichType;
@@ -119,7 +123,10 @@ public class SandwichShopController implements Initializable {
 	private void add(ActionEvent event) {
 		String selected = ingredientSelections.getSelectionModel().getSelectedItem();
 		if(selected == null) return;
-		if(!sandwich.add(selected)) return;
+		if(!sandwich.add(selected)) {
+			output.appendText("Number of extra ingredients is limited to 6.\n");
+			return;
+		}
 		ingredientSelections.getItems().removeIf(n -> (n.equals(selected)));
 		extraIngredients.getItems().add(selected);
 		price.setText("$" + sandwich.price());
@@ -137,13 +144,33 @@ public class SandwichShopController implements Initializable {
 
 	@FXML
 	private void addToOrder(ActionEvent event) {
-		sandwiches.add(sandwich);
+		OrderLine orderLine = new OrderLine(sandwich);
+		order.add(orderLine);
 		sandwichType.setValue("Chicken");
+		extraIngredients.getItems().clear();
+		output.appendText("Sandwich added to the order.\n");
 		this.sandwichTypeSelection(null);
 	}
 
 	@FXML
 	private void showOrder(ActionEvent event) throws Exception {
-		Main.swap();
+		//Main.swap();
+		try{
+			FXMLLoader fxmlLoader = new FXMLLoader(getClass().getClassLoader().getResource("OrderSummary.fxml"));
+			Parent root = fxmlLoader.load();
+			//Parent root = (new FXMLLoader(getClass().getClassLoader().getResource("OrderSummary.fxml"))).load();
+			Stage stage = new Stage();
+			stage.setScene(new Scene(root, 600,600));
+			stage.show();
+			OrderSummaryController orderSummaryController = (OrderSummaryController) fxmlLoader.getController();
+			orderSummaryController.setOrder(order);
+			orderSummaryController.update();
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+	}
+
+	public Order getOrder(){
+		return order;
 	}
 }
